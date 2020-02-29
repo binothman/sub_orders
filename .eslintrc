@@ -1,0 +1,48 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "airbnb"
+  ],
+  "plugins": [
+    "react"
+  ],
+  "rules": {
+    "camelcase": 0,
+    "import/no-extraneous-dependencies": [2, { "devDependencies": true }],
+    "import/no-named-as-default": 1,
+    "import/prefer-default-export": 0,
+    "jsx-a11y/anchor-is-valid": 0,
+    "jsx-a11y/click-events-have-key-events": 0,
+    "jsx-a11y/label-has-for": 0,
+    "jsx-a11y/no-noninteractive-element-interactions": 0,
+    "jsx-a11y/no-noninteractive-tabindex": 0,
+    "jsx-a11y/no-static-element-interactions": 0,
+    "jsx-a11y/tabindex-no-positive": 0,
+    "no-mixed-operators": 0,
+    "react/jsx-filename-extension": [1, { "extensions": [".js"] }],
+    "react/jsx-key" : 1,
+    "react/no-array-index-key": 0,
+    "react/require-default-props": 0,
+    "no-alert": 0
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["src"]
+      }
+    }
+  },
+  "globals": {
+    "Blob": true,
+    "FileReader": true,
+    "describe": true,
+    "document": true,
+    "expect": true,
+    "fetch": true,
+    "jest": true,
+    "localStorage": true,
+    "navigator": true,
+    "test": true,
+    "window": true
+  }
+}
