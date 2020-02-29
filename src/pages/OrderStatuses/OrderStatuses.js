@@ -2,7 +2,7 @@ import React from 'react';
 
 const OrderStatuses = () => (
   <div>
-    OrderStatuses
+    Order Statuses Page
   </div>
 );
 
