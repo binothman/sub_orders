@@ -1,0 +1,6 @@
+.form-toggle{
+  display: inline-block;
+}
+.form-toggle .ui.toggle.checkbox input:checked~label:before {
+  background-color: #5dd4c4 !important;
+}

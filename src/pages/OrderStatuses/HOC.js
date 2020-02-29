@@ -6,10 +6,14 @@ const HOC = (WrappedComponent) => {
       console.log('test');
     }
 
+    handleOnSubmit = (values) => {
+      console.log(values);
+    }
+
     render() {
       return (
         <WrappedComponent
-          dhsja="dasjdhajsd"
+          handleOnSubmit={this.handleOnSubmit}
           {...this.props}
         />
       );

@@ -1,15 +1,22 @@
 import React from 'react';
-import Widget from 'atoms/Widget';
+import PropTypes from 'prop-types';
+import Widget from 'templates/Widget';
 
-const OrderStatuses = () => (
+import Form from './Form';
+
+const OrderStatuses = ({ handleOnSubmit }) => (
   <div>
     <Widget
       title="Order Statuses"
       icon="file alternate"
     >
-      Content Here
+      <Form onSubmit={handleOnSubmit} />
     </Widget>
   </div>
 );
+
+OrderStatuses.propTypes = {
+  handleOnSubmit: PropTypes.func.isRequired,
+};
 
 export default OrderStatuses;

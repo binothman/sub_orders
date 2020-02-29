@@ -9,6 +9,8 @@ import Wrapper from 'atoms/Wrapper';
 // Application Pagges
 import OrderStatuses from 'pages/OrderStatuses';
 
+import './app.css';
+
 const App = () => (
   <Wrapper>
     <OrderStatuses />

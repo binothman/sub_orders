@@ -1,0 +1,16 @@
+.form-input {
+  margin-bottom: 20px;
+}
+.form-input__label {
+  margin-bottom: 5px;
+}
+.form-input--error {
+  color: #d15353;
+  font-size: 12px;
+  padding-left: 5px;
+  position: absolute;
+}
+
+.form-input .ui.fluid.input > input{
+  height: 40px;
+}
