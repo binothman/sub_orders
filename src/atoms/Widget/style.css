@@ -1,0 +1,15 @@
+.widget{
+  border: 1px solid #f5f5f5;
+  border-radius: 4px;
+  background-color: #fff;
+}
+.widget__title{
+  background-color: #fcfcfc;
+  color: #4f4f4f;
+  font-weight: 600;
+  display: flex;
+  vertical-align: middle;
+}
+.widget__title, .widget__content{
+  padding: 20px;
+}
