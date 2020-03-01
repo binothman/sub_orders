@@ -1,3 +1,33 @@
 .icon-picker{
   white-space: nowrap;
 }
+.icon-picker__icons {
+  display: grid;
+  grid-gap: 4px;
+  grid-template-columns: 50px 50px 50px;
+  grid-template-rows: auto;
+}
+
+.icon-picker__icons__item{
+  background: none;
+  background: #f1f1f1;
+  border: 1px solid #ededed;
+  padding: 6px 0;
+  outline: none;
+  text-align: center;
+
+}
+.icon-picker__icons__item:hover{
+  cursor: pointer;
+  background: #5ed7c6;
+  color: #fff;
+}
+.icon-picker__icons__item:hover .icon{
+  color: #fff !important;
+}
+
+.icon-picker__icons__item--active,
+.icon-picker__icons__item--active .icon{
+  background: #5ed7c6;
+  color: #fff !important;
+}

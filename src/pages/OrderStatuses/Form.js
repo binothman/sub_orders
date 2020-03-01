@@ -1,39 +1,28 @@
 import React from 'react';
-import { reduxForm, Field } from 'redux-form';
-import { Input, Toggle } from 'molecules/redux-form';
-import { IconPicker, Align } from 'atoms';
-import { SubStatus } from 'templates'
+import { reduxForm } from 'redux-form';
+import { OrderStatus } from 'templates';
+import { Icon } from 'semantic-ui-react';
+import { Button } from 'atoms';
 
 const Form = () => (
   <div>
-    <Align>
-      <IconPicker />
-      <Field
-        fluid
-        name="name"
-        component={Input}
-        style={{ width: '80%', marginLeft: '10px' }}
-      />
-      <Field
-        component={Toggle}
-        style={{ width: '10%', float: 'right', textAlign: 'right' }}
-      />
-    </Align>
-    <SubStatus>
-      <Align>
-        <IconPicker />
-        <Field
-          fluid
-          name="name"
-          component={Input}
-          style={{ width: '80%', marginLeft: '10px' }}
-        />
-        <Field
-          component={Toggle}
-          style={{ width: '10%', float: 'right', textAlign: 'right' }}
-        />
-      </Align>
-    </SubStatus>
+    <OrderStatus title="Preparing">
+      <OrderStatus title="Packaging" />
+      <OrderStatus title="Ready For Shipping" />
+      <Button icon labelPosition="left">
+        <Icon name="plus" />
+        New Status
+      </Button>
+    </OrderStatus>
+
+    <OrderStatus title="Preparing">
+      <OrderStatus title="Packaging" />
+      <OrderStatus title="Ready For Shipping" />
+      <Button icon labelPosition="left">
+        <Icon name="plus" />
+        New Status
+      </Button>
+    </OrderStatus>
   </div>
 );
 

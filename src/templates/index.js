@@ -1,7 +1,7 @@
-import SubStatus from './SubStatus';
 import Widget from './Widget';
+import OrderStatus from './OrderStatus';
 
 export {
-  SubStatus,
+  OrderStatus,
   Widget,
 };

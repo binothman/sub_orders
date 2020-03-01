@@ -1,0 +1,11 @@
+.custom-btn.ui.button{
+  background-color: #5ed7c6;
+  color: #fff;
+  font-weight: 300;
+}
+.custom-btn.ui.button:hover{
+  background-color: #52c7b7;
+}
+.custom-btn.ui.labeled.icon.button > .icon{
+  background-color: rgba(0,0,0,.1);
+}
