@@ -21,6 +21,7 @@ const HOC = (WrappedComponent) => {
 
     handleValue = (value) => {
       this.setState({ value });
+      document.body.click();
     }
 
     render() {
