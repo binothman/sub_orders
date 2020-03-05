@@ -10,7 +10,6 @@ import { FieldArray } from 'redux-form';
 
 const Statuses = ({ fields, handleAddNewStatus }) => (
   fields.map((field, index) => {
-
     // pick field values
     const status = fields.get(index);
 
