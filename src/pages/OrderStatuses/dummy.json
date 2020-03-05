@@ -1,0 +1,45 @@
+{
+	"statuses": [{
+			"title": "Preparing",
+			"icon": "group",
+			"message": "Hello world",
+			"active": true,
+			"sub_statuses": [{
+					"title": "Order In Preparing Status",
+					"icon": "group"
+				},
+				{
+					"title": "Order In Packaging Status",
+					"icon": "group"
+				}
+			]
+		},
+		{
+			"title": "Packaging",
+			"icon": "group",
+			"sub_statuses": [{
+					"title": "Order In Preparing Status",
+					"icon": "group"
+				},
+				{
+					"title": "Order In Packaging Status",
+					"icon": "group"
+				}
+			]
+		},
+
+		{
+			"title": "Shipping",
+			"icon": "group",
+			"sub_statuses": [{
+					"title": "Order In Preparing Status",
+					"icon": "group"
+				},
+				{
+					"title": "Order In Packaging Status",
+					"icon": "group"
+				}
+			]
+		}
+	]
+}

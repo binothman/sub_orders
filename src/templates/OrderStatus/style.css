@@ -57,7 +57,7 @@
   height: auto;
   padding: 20px;
 }
-.order_status__fields__title_form--enable::before{
+.order_status.nested .order_status__fields__title_form--enable::before{
   content: '';
   height: 10px;
   border-left: 2px solid #eceaea;

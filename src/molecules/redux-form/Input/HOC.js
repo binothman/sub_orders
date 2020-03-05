@@ -4,12 +4,12 @@ import PropTypes from 'prop-types';
 const HOC = (WrappedComponent) => {
   class Input extends Component {
     handleOnChange = (e, data) => {
-      const { type, input } = this.props;
+      const { type, input: { onChange } } = this.props;
       const value = type === 'number'
         ? data.value.replace(/[^0-9\\.]+/g, '')
         : data.value;
 
-      input.onChange(value);
+      onChange(value);
     }
 
     render() {
@@ -24,7 +24,9 @@ const HOC = (WrappedComponent) => {
 
   Input.propTypes = {
     type: PropTypes.string,
-    input: PropTypes.node,
+    input: PropTypes.shape({
+      onChange: PropTypes.func,
+    }),
   };
 
   return Input;

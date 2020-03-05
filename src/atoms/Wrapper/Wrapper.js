@@ -1,3 +1,7 @@
+/*
+  Wrapper Component
+  -- the main wrappe for the app
+*/
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Container } from 'semantic-ui-react';

@@ -1,0 +1,17 @@
+@media only screen and (max-width: 540px) {
+  .order_status__fields {
+    display: block;
+  }
+  .order_status__fields > div {
+    margin-bottom: 5px;
+  }
+  .order_status__fields--sub {
+    padding: 0;
+    padding-left: 10px;
+    margin: 0;
+    margin-left: 10px;
+  }
+  .order_status__fields--sub .order_status__fields__title{
+    width: 100%;
+  }
+}

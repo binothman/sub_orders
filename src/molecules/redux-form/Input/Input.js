@@ -31,7 +31,10 @@ const Input = ({
 
 Input.propTypes = {
   title: PropTypes.string,
-  meta: PropTypes.node.isRequired,
+  meta: PropTypes.shape({
+    error: PropTypes.string,
+    touched: PropTypes.bool,
+  }),
   style: PropTypes.node,
   disabled: PropTypes.bool,
   handleOnChange: PropTypes.func,

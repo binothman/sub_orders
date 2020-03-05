@@ -9,6 +9,7 @@ import Wrapper from 'atoms/Wrapper';
 // Application Pagges
 import OrderStatuses from 'pages/OrderStatuses';
 
+// base CSS
 import './app.css';
 
 const App = () => (

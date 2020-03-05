@@ -1,4 +1,13 @@
+import HOCReduxForm from 'atoms/HOCReduxForm';
 import OrderStatuses from './OrderStatuses';
 import HOC from './HOC';
 
-export default HOC(OrderStatuses);
+import { statuses } from './dummy.json';
+
+
+const formConfig = {
+  form: 'OrderStatuses',
+  initialValues: { statuses },
+};
+
+export default HOCReduxForm(formConfig)(HOC(OrderStatuses));

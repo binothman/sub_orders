@@ -1,21 +1,19 @@
-import { applyMiddleware, createStore, combineReducers } from 'redux';
+/*
+  Redux Store
+
+  this initialize file for application state using redux
+  - use this file to add/edit entities the STATE
+*/
+
+import { createStore, combineReducers } from 'redux';
+
+// redux-form reducer
 import { reducer } from 'redux-form';
-import { createLogger } from 'redux-logger';
-
-const logger = [];
-
-if (process.env.NODE_ENV === 'development') {
-  logger.push(createLogger());
-}
-
-const middleware = applyMiddleware(
-  ...logger,
-);
 
 const rootReducer = combineReducers({
   form: reducer,
 });
 
-const store = createStore(rootReducer, middleware);
+const store = createStore(rootReducer);
 
 export default store;
