@@ -26,10 +26,22 @@ const OrderStatus = ({
   index,
   addNewStatus,
   sub_statuses,
+  submited,
+  errMessages,
+  status,
 }) => {
   const [editing, editingToggle] = useState(false);
+  const [error, setError] = useState(false);
   const enableEditing = () => !editing && editingToggle(true);
   const disableEditing = () => editingToggle(false);
+
+
+  // show error message after click on save
+  if (!error && submited) {
+    if (!status.message) {
+      setError(errMessages.message);
+    }
+  }
 
   return (
     <div className={classNames(
@@ -42,19 +54,27 @@ const OrderStatus = ({
           name={`${field}.icon`}
           component={IconPicker}
         />
-        <div
-          className="order_status__fields__title"
-          onClick={enableEditing}
-        >
+        <div>
+          <div
+            className="order_status__fields__title"
+            onClick={enableEditing}
+          >
 
-          {title || `Status ${index + 1}`}
+            {title || `Status ${index + 1}`}
 
-          <TitleForm
-            editing={editing}
-            onSave={disableEditing}
-            field={field}
-          />
+            <TitleForm
+              editing={editing}
+              onSave={disableEditing}
+              field={field}
+              setError={setError}
+              errMessages={errMessages}
+            />
 
+          </div>
+
+          {error && (
+            <div style={{ color: 'red' }}>{error}</div>
+          )}
         </div>
         <Field
           name={`${field}.active`}
@@ -94,6 +114,9 @@ OrderStatus.propTypes = {
   index: PropTypes.number,
   addNewStatus: PropTypes.func,
   sub_statuses: PropTypes.arrayOf(Object),
+  submited: PropTypes.bool,
+  status: PropTypes.shape(),
+  errMessages: PropTypes.shape(),
 };
 
 export default OrderStatus;

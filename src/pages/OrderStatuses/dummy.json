@@ -2,7 +2,6 @@
 	"statuses": [{
 			"title": "Preparing",
 			"icon": "group",
-			"message": "Hello world",
 			"active": true,
 			"sub_statuses": [{
 					"title": "Order In Preparing Status",

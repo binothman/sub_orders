@@ -6,9 +6,8 @@ const HOC = (WrappedComponent) => {
     state = { values: null }
 
     // handle on Click on Save Btn
-    handleSave = () => {
-      const { formValues } = this.props;
-      this.setState({ values: formValues });
+    handleOnSubmit = (values) => {
+      this.setState({ values });
     }
 
 
@@ -25,7 +24,7 @@ const HOC = (WrappedComponent) => {
       return (
         <WrappedComponent
           values={values}
-          handleSave={this.handleSave}
+          handleOnSubmit={this.handleOnSubmit}
           handleAddNewStatus={this.handleAddNewStatus}
           {...this.props}
         />

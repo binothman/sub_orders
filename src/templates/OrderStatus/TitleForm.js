@@ -18,6 +18,8 @@ const TitleForm = ({
   editing,
   field,
   onSave,
+  setError,
+  errMessages,
 }) => (
   <div
     className={classNames(
@@ -35,6 +37,10 @@ const TitleForm = ({
       component={Textarea}
       placeholder="Enter Client Message..."
       validate={[validations.required]}
+      onBlur={(e, val) => {
+        const err = val ? false : errMessages.message;
+        setError(err);
+      }}
     />
     <Button icon labelPosition="left" onClick={onSave}>
       <Icon name="checkmark" />
@@ -47,6 +53,8 @@ TitleForm.propTypes = {
   editing: PropTypes.bool,
   field: PropTypes.string.isRequired,
   onSave: PropTypes.func.isRequired,
+  setError: PropTypes.func,
+  errMessages: PropTypes.shape(),
 };
 
 export default TitleForm;
