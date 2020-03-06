@@ -11,13 +11,6 @@ const HOC = (WrappedComponent) => {
     }
 
 
-    // handle on click on Add New Status Btn
-    handleAddNewStatus = (field, sub_statuses) => {
-      const { change } = this.props;
-      const value = sub_statuses || [];
-      change(`${field}.sub_statuses`, [...value, {}]);
-    }
-
     render() {
       const { values } = this.state;
 
@@ -25,7 +18,6 @@ const HOC = (WrappedComponent) => {
         <WrappedComponent
           values={values}
           handleOnSubmit={this.handleOnSubmit}
-          handleAddNewStatus={this.handleAddNewStatus}
           {...this.props}
         />
       );

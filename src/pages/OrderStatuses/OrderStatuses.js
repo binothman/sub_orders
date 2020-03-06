@@ -3,19 +3,12 @@ import PropTypes from 'prop-types';
 
 import Form from './Form';
 
-const OrderStatuses = ({
-  handleOnSubmit,
-  handleAddNewStatus,
-}) => (
-  <Form
-    onSubmit={handleOnSubmit}
-    handleAddNewStatus={handleAddNewStatus}
-  />
+const OrderStatuses = ({ handleOnSubmit }) => (
+  <Form onSubmit={handleOnSubmit} />
 );
 
 OrderStatuses.propTypes = {
   handleOnSubmit: PropTypes.func,
-  handleAddNewStatus: PropTypes.func,
 };
 
 export default OrderStatuses;
