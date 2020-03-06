@@ -1,16 +1,16 @@
-import React from 'react';
+import React from "react";
 
 // include semantic-ui styles
-import 'semantic-ui-css/semantic.min.css';
+import "semantic-ui-css/semantic.min.css";
 
 // Maib wrapper for all pages
-import Wrapper from 'atoms/Wrapper';
+import Wrapper from "atoms/Wrapper";
 
 // Application Pagges
-import OrderStatuses from 'pages/OrderStatuses';
+import OrderStatuses from "pages/OrderStatuses";
 
 // base CSS
-import './app.css';
+import "./app.css";
 
 const App = () => (
   <Wrapper>
