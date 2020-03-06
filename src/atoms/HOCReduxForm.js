@@ -5,7 +5,7 @@
 */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { reduxForm, getFormValues } from 'redux-form';
+import { reduxForm, getFormValues, getFormSyncErrors } from 'redux-form';
 import { connect } from 'react-redux';
 
 const HOCReduxForm = (config) => (WrappedComponent) => {
@@ -47,6 +47,7 @@ const HOCReduxForm = (config) => (WrappedComponent) => {
 
   const mapStateToProps = (state) => ({
     formValues: getFormValues(formID)(state) || {},
+    errors: getFormSyncErrors(formID)(state) || {},
   });
 
   return connect(mapStateToProps)(
