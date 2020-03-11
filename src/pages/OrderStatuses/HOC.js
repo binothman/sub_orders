@@ -1,22 +1,20 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
-const HOC = (WrappedComponent) => {
+const HOC = WrappedComponent => {
   class OrderStatuses extends React.Component {
-    state = { values: null }
+    state = { values: null };
 
     // handle on Click on Save Btn
-    handleOnSubmit = (values) => {
+    handleOnSubmit = values => {
       this.setState({ values });
-    }
-
+    };
 
     // handle on click on Add New Status Btn
-    handleAddNewStatus = (field, sub_statuses) => {
-      const { change } = this.props;
+    handleAddNewStatus = (field, sub_statuses, change) => {
       const value = sub_statuses || [];
       change(`${field}.sub_statuses`, [...value, {}]);
-    }
+    };
 
     render() {
       const { values } = this.state;
@@ -34,7 +32,7 @@ const HOC = (WrappedComponent) => {
 
   OrderStatuses.propTypes = {
     change: PropTypes.func,
-    formValues: PropTypes.shape(),
+    formValues: PropTypes.shape()
   };
 
   return OrderStatuses;
